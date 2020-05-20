@@ -8,7 +8,7 @@
 
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
-#include "../Constants.h"
+#include "Log.h"
 
 class ResourceManager
 {

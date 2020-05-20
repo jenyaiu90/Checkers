@@ -25,6 +25,7 @@ Field::Field(const ResourceManager& rm)
 			_checkers[j][i] = new Checker(Checker::BLACK, sf::Vector2i(j, i), rm.get_checkers_texture());
 		}
 	}
+	Log_d(D_FIELD_CREATED);
 }
 
 Field::~Field()

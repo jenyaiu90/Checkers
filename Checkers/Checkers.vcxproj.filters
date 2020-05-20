@@ -32,6 +32,9 @@
     <ClCompile Include="src\System\ResourceManager.cpp">
       <Filter>Source Files\src\System</Filter>
     </ClCompile>
+    <ClCompile Include="src\System\Log.cpp">
+      <Filter>Source Files\src\System</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Constants.h">
@@ -44,6 +47,9 @@
       <Filter>Source Files\src\Classes</Filter>
     </ClInclude>
     <ClInclude Include="src\System\ResourceManager.h">
+      <Filter>Source Files\src\System</Filter>
+    </ClInclude>
+    <ClInclude Include="src\System\Log.h">
       <Filter>Source Files\src\System</Filter>
     </ClInclude>
   </ItemGroup>

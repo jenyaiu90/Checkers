@@ -35,12 +35,14 @@
     </ClCompile>
     <ClCompile Include="src\Classes\Checker.cpp" />
     <ClCompile Include="src\Classes\Field.cpp" />
+    <ClCompile Include="src\System\Log.cpp" />
     <ClCompile Include="src\System\ResourceManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Classes\Checker.h" />
     <ClInclude Include="src\Classes\Field.h" />
     <ClInclude Include="src\Constants.h" />
+    <ClInclude Include="src\System\Log.h" />
     <ClInclude Include="src\System\ResourceManager.h" />
   </ItemGroup>
   <ItemGroup>

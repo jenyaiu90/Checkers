@@ -22,6 +22,7 @@ void Checker::move(const sf::Vector2i& new_position)
 {
 	_position = new_position;
 	_sprite.setPosition(_position.x * CHECKER_SIZE, (FIELD_SIZE - _position.y - 1) * CHECKER_SIZE);
+	Log_d(D_CHECKER_MOVE + "(" + std::to_string(new_position.x) + "; " + std::to_string(new_position.y) + ")");
 }
 
 void Checker::draw(sf::RenderWindow& window)
