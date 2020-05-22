@@ -18,9 +18,9 @@ const int CHECKER_ROWS = 3; //Количество рядов шашек в начале игры
 const int WHITE_TEXTURE = 0; //Белая шашка
 const int BLACK_TEXTURE = 1; //Чёрная шашка
 const int WHITE_Q_TEXTURE = 2; //Белая дамка
-const int BLACK_Q_TEXTIRE = 3; //Чёрная дамка
-const int SELECTED_TEXTURE = 0; //Выделенная шашка
-const int UNSELECTED_TEXTURE = 1; //Шашка без выделения
+const int BLACK_Q_TEXTURE = 3; //Чёрная дамка
+const int UNSELECTED_TEXTURE = 0; //Шашка без выделения
+const int SELECTED_TEXTURE = 1; //Выделенная шашка
 
 //ПУТИ К ПАПКАМ
 const std::string TEXTURES_PATH = "res\\textures\\"; //Путь к папке с текстурами
@@ -55,6 +55,9 @@ const std::string D_FIELD_CREATED = "the field is created"; //Игровое поле созда
 const std::string I_START = "the program is started"; //Начало работы программы
 const std::string I_END = "the program is closed"; //Работа программы завершена
 const std::string I_GAME_START = "the game is started"; //Игра начата
+
+//ПРЕДУПРЕЖДЕНИЯ
+const std::string W_CLICK_OUT_OF_WINDOW = "a click out of the window is detected. That`s strange..."; //Обнаружено нажатие вне окна
 
 //ОШИБКИ
 const std::string E_NO_FILE = "file not found: "; //Файл не найден

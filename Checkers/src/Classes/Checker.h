@@ -8,27 +8,28 @@
 
 #include "../System/ResourceManager.h"
 
-//Класс шашки
 class Checker
 {
 public:
-	//Цвет шашки
 	enum Color
 	{
-		WHITE, //Белый
-		BLACK //Чёрный
+		WHITE,
+		BLACK
 	};
 protected:
-	Color _color; //Цвет шашки
-	bool _is_queen; //Является ли дамкой
-	bool _is_selected; //Выделена ли
-	sf::Vector2i _position; //Координаты на доске
-	sf::Sprite _sprite; //Спрайт
+	Color _color;
+	bool _is_queen;
+	bool _is_selected;
+	sf::Vector2i _position;
+	sf::Sprite _sprite;
 public:
 	Checker(const Color& color, const sf::Vector2i& position, const sf::Texture& texture);
 
-	void move(const sf::Vector2i& new_position); //Подвинуть шашку
-	void draw(sf::RenderWindow& window); //Отрисовать шашку
-	void select(); //Выделить
-	void unselect(); //Снять выделение
+	void move(const sf::Vector2i& new_position);
+	void draw(sf::RenderWindow& window) const;
+	void select();
+	void unselect();
+	sf::Vector2i get_position() const;
+	Color get_color() const;
+	bool is_queen() const;
 };

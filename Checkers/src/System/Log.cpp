@@ -59,7 +59,7 @@ void Log::w(const std::string& msg, const std::string& func_name)
 void Log::e(const std::string& msg, const std::string& func_name)
 {
 	log(ERROR + msg + REPORT, func_name);
-	std::runtime_error(ERROR + msg);
+	throw std::runtime_error(ERROR + msg);
 }
 
 void Log::debugEnable()
