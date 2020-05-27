@@ -57,7 +57,7 @@ int main()
 							current_color = current_color == Checker::WHITE ? Checker::BLACK : Checker::WHITE;
 							Field::delete_moveLL(moves);
 							moves = field.get_moves(current_color, eat_again);
-							if (moves == nullptr)
+							if (moves->from == moves->to && moves->next == nullptr)
 							{
 								game = false;
 								break;
@@ -77,11 +77,13 @@ int main()
 			window.display();
 		}
 
+		window.clear();
+		field.draw(window);
 		current_move.setTextureRect(sf::IntRect(
 			current_color == Checker::BLACK ? WHITE_Q_TEXTURE * CHECKER_SIZE : BLACK_Q_TEXTURE * CHECKER_SIZE,
 			0, CHECKER_SIZE, CHECKER_SIZE));
-		current_move.setScale(sf::Vector2f(10, 10));
-		current_move.setPosition(sf::Vector2f(FIELD_SIZE * CHECKER_SIZE * 2.5, FIELD_SIZE * CHECKER_SIZE * 2.5));
+		current_move.setScale(sf::Vector2f(6, 6));
+		current_move.setPosition(sf::Vector2f(CHECKER_SIZE * (FIELD_SIZE / 2 - 3), CHECKER_SIZE * (FIELD_SIZE / 2 - 3)));
 		window.draw(current_move);
 		window.display();
 
@@ -103,4 +105,5 @@ int main()
 		std::cout << ERROR << e.what();
 		system((LOG_FILE + TEXT_EXT).c_str());
 	}
+	return 0;
 }

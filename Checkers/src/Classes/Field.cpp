@@ -258,7 +258,6 @@ bool Field::click(sf::Vector2i position, Field::MoveLL* moves, const Checker::Co
 				{
 					_selected->unselect();
 					_selected = nullptr;
-					return false;
 				}
 			}
 		}
@@ -270,7 +269,7 @@ bool Field::click(sf::Vector2i position, Field::MoveLL* moves, const Checker::Co
 			}
 			_checkers[position.x][position.y]->select();
 			_selected = _checkers[position.x][position.y];
-			return false;
 		}
 	}
+	return false;
 }
