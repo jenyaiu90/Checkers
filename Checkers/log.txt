@@ -1,252 +1,282 @@
-27.05.20 16:27:23: Debug info: debug mode enable
+27.05.20 17:05:38: Debug info: debug mode enable
 <debugEnable>
 
-27.05.20 16:27:23: Information: the program is started
+27.05.20 17:05:38: Information: the program is started
 <main>
 
-27.05.20 16:27:24: Debug info: file is loaded: res\textures\field.png
+27.05.20 17:05:38: Debug info: file is loaded: res\textures\field.png
 <ResourceManager>
 
-27.05.20 16:27:24: Debug info: file is loaded: res\textures\checkers.png
+27.05.20 17:05:39: Debug info: file is loaded: res\textures\checkers.png
 <ResourceManager>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (0; 0)
+27.05.20 17:05:39: Debug info: a checker is moved to (0; 0)
 <move>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (2; 0)
+27.05.20 17:05:39: Debug info: a checker is moved to (2; 0)
 <move>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (4; 0)
+27.05.20 17:05:39: Debug info: a checker is moved to (4; 0)
 <move>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (6; 0)
+27.05.20 17:05:39: Debug info: a checker is moved to (6; 0)
 <move>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (1; 1)
+27.05.20 17:05:39: Debug info: a checker is moved to (1; 1)
 <move>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (3; 1)
+27.05.20 17:05:39: Debug info: a checker is moved to (3; 1)
 <move>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (5; 1)
+27.05.20 17:05:39: Debug info: a checker is moved to (5; 1)
 <move>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (7; 1)
+27.05.20 17:05:39: Debug info: a checker is moved to (7; 1)
 <move>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (0; 2)
+27.05.20 17:05:39: Debug info: a checker is moved to (0; 2)
 <move>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (2; 2)
+27.05.20 17:05:39: Debug info: a checker is moved to (2; 2)
 <move>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (4; 2)
+27.05.20 17:05:39: Debug info: a checker is moved to (4; 2)
 <move>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (6; 2)
+27.05.20 17:05:39: Debug info: a checker is moved to (6; 2)
 <move>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (1; 7)
+27.05.20 17:05:39: Debug info: a checker is moved to (1; 7)
 <move>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (3; 7)
+27.05.20 17:05:39: Debug info: a checker is moved to (3; 7)
 <move>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (5; 7)
+27.05.20 17:05:39: Debug info: a checker is moved to (5; 7)
 <move>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (7; 7)
+27.05.20 17:05:39: Debug info: a checker is moved to (7; 7)
 <move>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (0; 6)
+27.05.20 17:05:39: Debug info: a checker is moved to (0; 6)
 <move>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (2; 6)
+27.05.20 17:05:39: Debug info: a checker is moved to (2; 6)
 <move>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (4; 6)
+27.05.20 17:05:39: Debug info: a checker is moved to (4; 6)
 <move>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (6; 6)
+27.05.20 17:05:39: Debug info: a checker is moved to (6; 6)
 <move>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (1; 5)
+27.05.20 17:05:39: Debug info: a checker is moved to (1; 5)
 <move>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (3; 5)
+27.05.20 17:05:39: Debug info: a checker is moved to (3; 5)
 <move>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (5; 5)
+27.05.20 17:05:39: Debug info: a checker is moved to (5; 5)
 <move>
 
-27.05.20 16:27:24: Debug info: a checker is moved to (7; 5)
+27.05.20 17:05:39: Debug info: a checker is moved to (7; 5)
 <move>
 
-27.05.20 16:27:24: Debug info: the field is created
+27.05.20 17:05:39: Debug info: the field is created
 <Field>
 
-27.05.20 16:27:24: Information: the game is started
+27.05.20 17:05:39: Information: the game is started
 <main>
 
-27.05.20 16:27:33: Debug info: a checker is moved to (3; 3)
+27.05.20 17:05:40: Debug info: a checker is moved to (3; 3)
 <move>
 
-27.05.20 16:27:34: Debug info: a checker is moved to (2; 4)
+27.05.20 17:05:41: Debug info: a checker is moved to (2; 4)
 <move>
 
-27.05.20 16:27:35: Debug info: a checker is moved to (4; 4)
+27.05.20 17:05:42: Debug info: a checker is moved to (5; 3)
 <move>
 
-27.05.20 16:27:36: Debug info: a checker is moved to (3; 3)
+27.05.20 17:05:45: Debug info: a checker is moved to (4; 2)
 <move>
 
-27.05.20 16:27:36: Debug info: a checker is moved to (2; 2)
+27.05.20 17:05:46: Debug info: a checker is moved to (6; 4)
 <move>
 
-27.05.20 16:27:37: Debug info: a checker is moved to (1; 1)
+27.05.20 17:05:48: Debug info: a checker is moved to (5; 3)
 <move>
 
-27.05.20 16:27:38: Debug info: a checker is moved to (2; 2)
+27.05.20 17:05:52: Debug info: a checker is moved to (4; 2)
 <move>
 
-27.05.20 16:27:39: Debug info: a checker is moved to (3; 3)
+27.05.20 17:05:54: Debug info: a checker is moved to (3; 3)
 <move>
 
-27.05.20 16:27:39: Debug info: a checker is moved to (2; 4)
+27.05.20 17:05:58: Debug info: a checker is moved to (4; 4)
 <move>
 
-27.05.20 16:27:40: Debug info: a checker is moved to (3; 3)
+27.05.20 17:05:59: Debug info: a checker is moved to (5; 5)
 <move>
 
-27.05.20 16:27:41: Debug info: a checker is moved to (1; 1)
+27.05.20 17:06:02: Debug info: a checker is moved to (4; 4)
 <move>
 
-27.05.20 16:27:43: Debug info: a checker is moved to (1; 3)
+27.05.20 17:06:04: Debug info: a checker is moved to (4; 2)
 <move>
 
-27.05.20 16:27:47: Debug info: a checker is moved to (3; 5)
+27.05.20 17:06:06: Debug info: a checker is moved to (2; 4)
 <move>
 
-27.05.20 16:27:48: Debug info: a checker is moved to (0; 2)
+27.05.20 17:06:08: Debug info: a checker is moved to (6; 2)
 <move>
 
-27.05.20 16:27:48: Debug info: a checker is moved to (2; 4)
+27.05.20 17:06:09: Debug info: a checker is moved to (3; 5)
 <move>
 
-27.05.20 16:27:49: Debug info: a checker is moved to (3; 5)
+27.05.20 17:06:11: Debug info: a checker is moved to (7; 3)
 <move>
 
-27.05.20 16:27:49: Debug info: a checker is moved to (2; 4)
+27.05.20 17:06:13: Debug info: a checker is moved to (1; 5)
 <move>
 
-27.05.20 16:27:50: Debug info: a checker is moved to (1; 3)
+27.05.20 17:06:19: Debug info: a checker is moved to (5; 1)
 <move>
 
-27.05.20 16:27:51: Debug info: a checker is moved to (0; 2)
+27.05.20 17:06:20: Debug info: a checker is moved to (6; 6)
 <move>
 
-27.05.20 16:27:52: Debug info: a checker is moved to (2; 2)
+27.05.20 17:06:26: Debug info: a checker is moved to (7; 1)
 <move>
 
-27.05.20 16:27:53: Debug info: a checker is moved to (1; 1)
+27.05.20 17:06:27: Debug info: a checker is moved to (2; 6)
 <move>
 
-27.05.20 16:27:54: Debug info: a checker is moved to (0; 0)
+27.05.20 17:06:40: Debug info: a checker is moved to (6; 4)
 <move>
 
-27.05.20 16:27:56: Debug info: a checker is moved to (5; 5)
+27.05.20 17:06:45: Debug info: a checker is moved to (5; 3)
 <move>
 
-27.05.20 16:27:57: Debug info: a checker is moved to (5; 3)
+27.05.20 17:06:48: Debug info: a checker is moved to (3; 1)
 <move>
 
-27.05.20 16:27:58: Debug info: a checker is moved to (4; 4)
+27.05.20 17:06:48: Debug info: a checker is moved to (4; 2)
 <move>
 
-27.05.20 16:27:59: Debug info: a checker is moved to (3; 5)
+27.05.20 17:06:50: Debug info: a checker is moved to (3; 3)
 <move>
 
-27.05.20 16:28:00: Debug info: a checker is moved to (2; 6)
+27.05.20 17:06:50: Debug info: a checker is moved to (2; 2)
 <move>
 
-27.05.20 16:28:01: Debug info: a checker is moved to (4; 6)
+27.05.20 17:06:51: Debug info: a checker is moved to (1; 1)
 <move>
 
-27.05.20 16:28:01: Debug info: a checker is moved to (3; 5)
+27.05.20 17:06:53: Debug info: a checker is moved to (2; 2)
 <move>
 
-27.05.20 16:28:03: Debug info: a checker is moved to (1; 1)
+27.05.20 17:06:54: Debug info: a checker is moved to (3; 3)
 <move>
 
-27.05.20 16:28:03: Debug info: a checker is moved to (2; 4)
+27.05.20 17:06:55: Debug info: a checker is moved to (2; 4)
 <move>
 
-27.05.20 16:28:04: Debug info: a checker is moved to (2; 2)
+27.05.20 17:06:56: Debug info: a checker is moved to (4; 6)
 <move>
 
-27.05.20 16:28:05: Debug info: a checker is moved to (3; 3)
+27.05.20 17:06:57: Debug info: a checker is moved to (3; 5)
 <move>
 
-27.05.20 16:28:05: Debug info: a checker is moved to (4; 4)
+27.05.20 17:06:58: Debug info: a checker is moved to (3; 3)
 <move>
 
-27.05.20 16:28:07: Debug info: a checker is moved to (6; 4)
+27.05.20 17:07:00: Debug info: a checker is moved to (2; 4)
 <move>
 
-27.05.20 16:28:08: Debug info: a checker is moved to (4; 2)
+27.05.20 17:07:01: Debug info: a checker is moved to (1; 5)
 <move>
 
-27.05.20 16:28:09: Debug info: a checker is moved to (5; 3)
+27.05.20 17:07:02: Debug info: a checker is moved to (3; 7)
 <move>
 
-27.05.20 16:28:10: Debug info: a checker is moved to (6; 4)
+27.05.20 17:07:03: Debug info: a checker is moved to (2; 4)
 <move>
 
-27.05.20 16:28:11: Debug info: a checker is moved to (3; 5)
+27.05.20 17:07:04: Debug info: a checker is moved to (1; 3)
 <move>
 
-27.05.20 16:28:12: Debug info: a checker is moved to (2; 6)
+27.05.20 17:07:05: Debug info: a checker is moved to (0; 2)
 <move>
 
-27.05.20 16:28:13: Debug info: a checker is moved to (3; 5)
+27.05.20 17:07:06: Debug info: a checker is moved to (4; 2)
 <move>
 
-27.05.20 16:28:14: Debug info: a checker is moved to (5; 5)
+27.05.20 17:07:06: Debug info: a checker is moved to (2; 6)
 <move>
 
-27.05.20 16:28:15: Debug info: a checker is moved to (6; 6)
+27.05.20 17:07:07: Debug info: a checker is moved to (3; 3)
 <move>
 
-27.05.20 16:28:16: Debug info: a checker is moved to (7; 7)
+27.05.20 17:07:08: Debug info: a checker is moved to (3; 5)
 <move>
 
-27.05.20 16:28:17: Debug info: a checker is moved to (4; 4)
+27.05.20 17:07:09: Debug info: a checker is moved to (2; 4)
 <move>
 
-27.05.20 16:28:18: Debug info: a checker is moved to (6; 2)
+27.05.20 17:07:09: Debug info: a checker is moved to (1; 3)
 <move>
 
-27.05.20 16:28:18: Debug info: a checker is moved to (5; 3)
+27.05.20 17:07:11: Debug info: a checker is moved to (6; 2)
 <move>
 
-27.05.20 16:28:19: Debug info: a checker is moved to (4; 4)
+27.05.20 17:07:12: Debug info: a checker is moved to (5; 5)
 <move>
 
-27.05.20 16:28:22: Debug info: a checker is moved to (1; 5)
+27.05.20 17:07:13: Debug info: a checker is moved to (5; 3)
 <move>
 
-27.05.20 16:28:22: Debug info: a checker is moved to (3; 5)
+27.05.20 17:07:14: Debug info: a checker is moved to (4; 4)
 <move>
 
-27.05.20 16:28:23: Debug info: a checker is moved to (2; 4)
+27.05.20 17:07:15: Debug info: a checker is moved to (3; 5)
 <move>
 
-27.05.20 16:28:24: Debug info: a checker is moved to (1; 3)
+27.05.20 17:07:17: Debug info: a checker is moved to (2; 2)
 <move>
 
-27.05.20 16:28:40: Information: the program is closed
+27.05.20 17:07:19: Debug info: a checker is moved to (2; 6)
+<move>
+
+27.05.20 17:07:21: Debug info: a checker is moved to (1; 5)
+<move>
+
+27.05.20 17:07:23: Debug info: a checker is moved to (0; 4)
+<move>
+
+27.05.20 17:07:25: Debug info: a checker is moved to (1; 1)
+<move>
+
+27.05.20 17:07:25: Debug info: a checker is moved to (1; 5)
+<move>
+
+27.05.20 17:07:26: Debug info: a checker is moved to (3; 1)
+<move>
+
+27.05.20 17:07:27: Debug info: a checker is moved to (2; 6)
+<move>
+
+27.05.20 17:07:28: Debug info: a checker is moved to (2; 0)
+<move>
+
+27.05.20 17:07:29: Debug info: a checker is moved to (1; 7)
+<move>
+
+27.05.20 17:07:30: Debug info: a checker is moved to (4; 0)
+<move>
+
+27.05.20 17:07:38: Information: the program is closed
 <main>
 
-27.05.20 16:28:40: Debug info: resource manager is unloaded
+27.05.20 17:07:38: Debug info: resource manager is unloaded
 <~ResourceManager>
 

@@ -226,6 +226,8 @@ bool Field::_can(const sf::Vector2i& from, const sf::Vector2i& to, Field::MoveLL
 
 bool Field::click(sf::Vector2i position, Field::MoveLL* moves, const Checker::Color& color)
 {
+	static sf::Vector2i prev_position(0, 0);
+	static Checker::Color prev_color = Checker::BLACK;
 	position /= CHECKER_SIZE;
 	position.y = FIELD_SIZE - position.y - 1;
 	if (position.x < 0 || position.y < 0 ||
@@ -240,19 +242,38 @@ bool Field::click(sf::Vector2i position, Field::MoveLL* moves, const Checker::Co
 			if (_selected != nullptr)
 			{
 				sf::Vector2i eaten;
-				if (_can(_selected->get_position(), position, moves, eaten))
+				if ((color != prev_color || _selected->get_position() == prev_position) &&
+					_can(_selected->get_position(), position, moves, eaten))
 				{
-					_checkers[position.x][position.y] = _checkers[_selected->get_position().x][_selected->get_position().y];
-					_checkers[_selected->get_position().x][_selected->get_position().y] = nullptr;
-					_selected->move(position);
-					_selected->unselect();
-					_selected = nullptr;
-					if (eaten != sf::Vector2i(-1, -1))
+					bool can = color != prev_color;
+					if (!can)
 					{
-						delete _checkers[eaten.x][eaten.y];
-						_checkers[eaten.x][eaten.y] = nullptr;
+						for (MoveLL* p = moves; p != nullptr; p = p->next)
+						{
+							if (p->from == prev_position)
+							{
+								can = true;
+								break;
+							}
+						}
 					}
-					return true;
+
+					if (can)
+					{
+						_checkers[position.x][position.y] = _checkers[_selected->get_position().x][_selected->get_position().y];
+						_checkers[_selected->get_position().x][_selected->get_position().y] = nullptr;
+						_selected->move(position);
+						_selected->unselect();
+						_selected = nullptr;
+						if (eaten != sf::Vector2i(-1, -1))
+						{
+							delete _checkers[eaten.x][eaten.y];
+							_checkers[eaten.x][eaten.y] = nullptr;
+						}
+						prev_color = color;
+						prev_position = position;
+						return true;
+					}
 				}
 				else
 				{
