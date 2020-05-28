@@ -83,7 +83,154 @@ Field::MoveLL* Field::get_moves(const Checker::Color& color, bool& eat)
 			{
 				if (_checkers[j][i]->is_queen())
 				{
-
+					sf::Vector2i eaten(-1, -1);
+					for (int k = 1; i + k < FIELD_SIZE && j + k < FIELD_SIZE; k++)
+					{
+						if (_checkers[j + k][i + k] == nullptr)
+						{
+							if (eaten == sf::Vector2i(-1, -1))
+							{
+								if (!eat)
+								{
+									mp->from = sf::Vector2i(j, i);
+									mp->to = sf::Vector2i(j + k, i + k);
+									mp->eaten = sf::Vector2i(-1, -1);
+									mp->next = new MoveLL;
+									mp = mp->next;
+									mp->next = nullptr;
+								}
+							}
+							else
+							{
+								eat = true;
+								ep->from = sf::Vector2i(j, i);
+								ep->to = sf::Vector2i(j + k, i + k);
+								ep->eaten = eaten;
+								ep->next = new MoveLL;
+								ep = ep->next;
+								ep->next = nullptr;
+							}
+						}
+						else if (_checkers[j + k][i + k]->get_color() != color && eaten == sf::Vector2i(-1, -1))
+						{
+							eaten = sf::Vector2i(j + k, i + k);
+						}
+						else
+						{
+							break;
+						}
+					}
+					eaten = sf::Vector2i(-1, -1);
+					for (int k = 1; i + k < FIELD_SIZE && j - k >= 0; k++)
+					{
+						if (_checkers[j - k][i + k] == nullptr)
+						{
+							if (eaten == sf::Vector2i(-1, -1))
+							{
+								if (!eat)
+								{
+									mp->from = sf::Vector2i(j, i);
+									mp->to = sf::Vector2i(j - k, i + k);
+									mp->eaten = sf::Vector2i(-1, -1);
+									mp->next = new MoveLL;
+									mp = mp->next;
+									mp->next = nullptr;
+								}
+							}
+							else
+							{
+								eat = true;
+								ep->from = sf::Vector2i(j, i);
+								ep->to = sf::Vector2i(j - k, i + k);
+								ep->eaten = eaten;
+								ep->next = new MoveLL;
+								ep = ep->next;
+								ep->next = nullptr;
+							}
+						}
+						else if (_checkers[j - k][i + k]->get_color() != color && eaten == sf::Vector2i(-1, -1))
+						{
+							eaten = sf::Vector2i(j - k, i + k);
+						}
+						else
+						{
+							break;
+						}
+					}
+					eaten = sf::Vector2i(-1, -1);
+					for (int k = 1; i - k >= 0 && j + k < FIELD_SIZE; k++)
+					{
+						if (_checkers[j + k][i - k] == nullptr)
+						{
+							if (eaten == sf::Vector2i(-1, -1))
+							{
+								if (!eat)
+								{
+									mp->from = sf::Vector2i(j, i);
+									mp->to = sf::Vector2i(j + k, i - k);
+									mp->eaten = sf::Vector2i(-1, -1);
+									mp->next = new MoveLL;
+									mp = mp->next;
+									mp->next = nullptr;
+								}
+							}
+							else
+							{
+								eat = true;
+								ep->from = sf::Vector2i(j, i);
+								ep->to = sf::Vector2i(j + k, i - k);
+								ep->eaten = eaten;
+								ep->next = new MoveLL;
+								ep = ep->next;
+								ep->next = nullptr;
+							}
+						}
+						else if (_checkers[j + k][i - k]->get_color() != color && eaten == sf::Vector2i(-1, -1))
+						{
+							eaten = sf::Vector2i(j + k, i - k);
+						}
+						else
+						{
+							break;
+						}
+					}
+					eaten = sf::Vector2i(-1, -1);
+					for (int k = 1; i - k >= 0 && j - k >= 0; k++)
+					{
+						if (_checkers[j - k][i - k] == nullptr)
+						{
+							if (eaten == sf::Vector2i(-1, -1))
+							{
+								if (!eat)
+								{
+									mp->from = sf::Vector2i(j, i);
+									mp->to = sf::Vector2i(j - k, i - k);
+									mp->eaten = sf::Vector2i(-1, -1);
+									mp->next = new MoveLL;
+									mp = mp->next;
+									mp->next = nullptr;
+								}
+							}
+							else
+							{
+								eat = true;
+								ep->from = sf::Vector2i(j, i);
+								ep->to = sf::Vector2i(j - k, i - k);
+								ep->eaten = eaten;
+								ep->next = new MoveLL;
+								ep = ep->next;
+								ep->next = nullptr;
+							}
+						}
+						else if (_checkers[j - k][i - k]->get_color() != color && eaten == sf::Vector2i(-1, -1))
+						{
+							eaten = sf::Vector2i(j - k, i - k);
+						}
+						else
+						{
+							break;
+						}
+					}
 				}
 				else
 				{
