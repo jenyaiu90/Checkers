@@ -20,6 +20,7 @@ protected:
 	Color _color;
 	bool _is_queen;
 	bool _is_selected;
+	bool _is_turned;
 	sf::Vector2i _position;
 	sf::Sprite _sprite;
 public:
@@ -32,4 +33,5 @@ public:
 	sf::Vector2i get_position() const;
 	Color get_color() const;
 	bool is_queen() const;
+	void turn();
 };

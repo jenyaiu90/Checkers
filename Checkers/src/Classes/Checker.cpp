@@ -11,6 +11,7 @@ Checker::Checker(const Color& color, const sf::Vector2i& position, const sf::Tex
 	_color = color;
 	_is_queen = false;
 	_is_selected = false;
+	_is_turned = false;
 	_sprite.setTexture(texture);
 	_sprite.setTextureRect(sf::IntRect(
 		_color == WHITE ? WHITE_TEXTURE * CHECKER_SIZE : BLACK_TEXTURE * CHECKER_SIZE,
@@ -22,6 +23,11 @@ void Checker::move(const sf::Vector2i& new_position)
 {
 	_position = new_position;
 	_sprite.setPosition(_position.x * CHECKER_SIZE, (FIELD_SIZE - _position.y - 1) * CHECKER_SIZE);
+	if (_is_turned)
+	{
+		_is_turned = false;
+		turn();
+	}
 	Log_d(D_CHECKER_MOVE + "(" + std::to_string(new_position.x) + "; " + std::to_string(new_position.y) + ")");
 
 	if (!_is_queen && _position.y == (_color == WHITE ? FIELD_SIZE - 1 : 0))
@@ -67,4 +73,11 @@ Checker::Color Checker::get_color() const
 bool Checker::is_queen() const
 {
 	return _is_queen;
+}
+
+void Checker::turn()
+{
+	_is_turned = !_is_turned;
+	_sprite.setPosition((FIELD_SIZE - 1 - _sprite.getPosition().x / CHECKER_SIZE) * CHECKER_SIZE,
+		(FIELD_SIZE - 1 - _sprite.getPosition().y / CHECKER_SIZE) * CHECKER_SIZE);
 }

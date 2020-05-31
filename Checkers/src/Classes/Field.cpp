@@ -8,6 +8,7 @@
 
 Field::Field(const ResourceManager& rm)
 {
+	_is_turned = false;
 	_sprite.setTexture(rm.get_field_texture());
 
 	for (int i = 0; i < CHECKER_ROWS; i++)
@@ -371,73 +372,107 @@ bool Field::_can(const sf::Vector2i& from, const sf::Vector2i& to, Field::MoveLL
 	return false;
 }
 
-bool Field::click(sf::Vector2i position, Field::MoveLL* moves, const Checker::Color& color)
+bool Field::click(sf::Vector2i position, Field::MoveLL* moves, const Checker::Color& color, bool& options)
 {
 	static sf::Vector2i prev_position(0, 0);
 	static Checker::Color prev_color = Checker::BLACK;
 	position /= CHECKER_SIZE;
-	position.y = FIELD_SIZE - position.y - 1;
-	if (position.x < 0 || position.y < 0 ||
+	position.y = FIELD_SIZE - 1 - position.y;
+
+	if (_is_turned && position.y != -1)
+	{
+		position.x = FIELD_SIZE - 1 - position.x;
+		position.y = FIELD_SIZE - 1 - position.y;
+	}
+
+	if (position.x < 0 || position.y < -1 ||
 		position.x >= FIELD_SIZE || position.y >= FIELD_SIZE)
 	{
 		Log_w(W_CLICK_OUT_OF_WINDOW);
 	}
 	else
 	{
-		if (_checkers[position.x][position.y] == nullptr)
+		if (position.x == FIELD_SIZE - 1 && position.y == -1)
 		{
-			if (_selected != nullptr)
+			options = true;
+		}
+		else if (position.y > -1)
+		{
+			if (_checkers[position.x][position.y] == nullptr)
 			{
-				sf::Vector2i eaten;
-				if ((color != prev_color || _selected->get_position() == prev_position) &&
-					_can(_selected->get_position(), position, moves, eaten))
+				if (_selected != nullptr)
 				{
-					bool can = color != prev_color;
-					if (!can)
+					sf::Vector2i eaten;
+					if ((color != prev_color || _selected->get_position() == prev_position) &&
+						_can(_selected->get_position(), position, moves, eaten))
 					{
-						for (MoveLL* p = moves; p != nullptr; p = p->next)
+						bool can = color != prev_color;
+						if (!can)
 						{
-							if (p->from == prev_position)
+							for (MoveLL* p = moves; p != nullptr; p = p->next)
 							{
-								can = true;
-								break;
+								if (p->from == prev_position)
+								{
+									can = true;
+									break;
+								}
 							}
 						}
-					}
 
-					if (can)
+						if (can)
+						{
+							_checkers[position.x][position.y] = _checkers[_selected->get_position().x][_selected->get_position().y];
+							_checkers[_selected->get_position().x][_selected->get_position().y] = nullptr;
+							_selected->move(position);
+							_selected->unselect();
+							_selected = nullptr;
+							if (eaten != sf::Vector2i(-1, -1))
+							{
+								delete _checkers[eaten.x][eaten.y];
+								_checkers[eaten.x][eaten.y] = nullptr;
+							}
+							prev_color = color;
+							prev_position = position;
+							return true;
+						}
+					}
+					else
 					{
-						_checkers[position.x][position.y] = _checkers[_selected->get_position().x][_selected->get_position().y];
-						_checkers[_selected->get_position().x][_selected->get_position().y] = nullptr;
-						_selected->move(position);
 						_selected->unselect();
 						_selected = nullptr;
-						if (eaten != sf::Vector2i(-1, -1))
-						{
-							delete _checkers[eaten.x][eaten.y];
-							_checkers[eaten.x][eaten.y] = nullptr;
-						}
-						prev_color = color;
-						prev_position = position;
-						return true;
 					}
 				}
-				else
+			}
+			else
+			{
+				if (_selected != nullptr)
 				{
 					_selected->unselect();
-					_selected = nullptr;
 				}
+				_checkers[position.x][position.y]->select();
+				_selected = _checkers[position.x][position.y];
 			}
-		}
-		else
-		{
-			if (_selected != nullptr)
-			{
-				_selected->unselect();
-			}
-			_checkers[position.x][position.y]->select();
-			_selected = _checkers[position.x][position.y];
 		}
 	}
 	return false;
+}
+
+void Field::turn()
+{
+	_is_turned = !_is_turned;
+	for (int i = 0; i < FIELD_SIZE; i++)
+	{
+		for (int j = 0; j < FIELD_SIZE; j++)
+		{
+			if (_checkers[i][j] != nullptr)
+			{
+				_checkers[i][j]->turn();
+			}
+		}
+	}
+}
+
+bool Field::get_is_turned()
+{
+	return _is_turned;
 }
