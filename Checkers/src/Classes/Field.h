@@ -34,7 +34,7 @@ public:
 	MoveLL* get_moves(const Checker::Color& color, bool& eat);
 
 	void draw(sf::RenderWindow& window);
-	bool click(sf::Vector2i position, MoveLL* moves, const Checker::Color& color, bool& options);
+	bool click(sf::Vector2i position, MoveLL* moves, const Checker::Color& color, bool& options, const bool& an);
 	void turn();
 	bool get_is_turned();
 };

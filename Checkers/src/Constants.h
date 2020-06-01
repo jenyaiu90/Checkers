@@ -14,6 +14,7 @@ const std::string PROGRAM_VERSION = "Alpha 1.0.0"; //Версия программы
 const int CHECKER_SIZE = 64; //Размер одной шашки
 const int FIELD_SIZE = 8; //Размер игрового поля
 const int CHECKER_ROWS = 3; //Количество рядов шашек в начале игры
+const int CHECKER_SPEED = 0.2; //Скорость шашки
 
 //НОМЕРА ТЕКСТУР ШАШЕК
 const int WHITE_TEXTURE = 0; //Белая шашка

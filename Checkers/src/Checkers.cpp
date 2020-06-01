@@ -103,7 +103,7 @@ int main()
 					else
 					{
 						bool options_click = false;
-						if (field.click(sf::Mouse::getPosition(window), moves, current_color, options_click))
+						if (field.click(sf::Mouse::getPosition(window), moves, current_color, options_click, !options.get_turn_mode()))
 						{
 							Field::delete_moveLL(moves);
 							bool eat_again;
@@ -171,6 +171,7 @@ int main()
 					Log_i(I_END);
 				}
 			}
+			window.display();
 		}
 	}
 	catch (std::exception e)

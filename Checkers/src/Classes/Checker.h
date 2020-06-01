@@ -24,9 +24,10 @@ protected:
 	sf::Vector2i _position;
 	sf::Sprite _sprite;
 public:
-	Checker(const Color& color, const sf::Vector2i& position, const sf::Texture& texture);
+	Checker(const Color& color, sf::Vector2i position, const sf::Texture& texture);
 
-	void move(const sf::Vector2i& new_position);
+	void move(const sf::Vector2i& new_position, const bool& an);
+	void move_in_background(sf::Vector2i new_position, const bool& an);
 	void draw(sf::RenderWindow& window) const;
 	void select();
 	void unselect();

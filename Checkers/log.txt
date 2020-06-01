@@ -1,22 +1,4 @@
-31.05.20 19:45:30: Information: the program is started
+01.06.20 10:13:13: Information: the program is started
 
-31.05.20 19:45:33: Information: the game is started
-
-31.05.20 19:45:58: Debug info: debug mode enable
-<debugEnable>
-
-31.05.20 19:46:05: Debug info: a checker is moved to (5; 3)
-<move>
-
-31.05.20 19:46:34: Debug info: info window is opened
-<info_window>
-
-31.05.20 19:46:42: Debug info: info window is closed
-<info_window>
-
-31.05.20 19:46:44: Information: the program is closed
-<main>
-
-31.05.20 19:46:44: Debug info: resource manager is unloaded
-<~ResourceManager>
+01.06.20 10:13:17: Information: the game is started
 

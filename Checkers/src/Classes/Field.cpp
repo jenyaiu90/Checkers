@@ -363,7 +363,8 @@ bool Field::_can(const sf::Vector2i& from, const sf::Vector2i& to, Field::MoveLL
 {
 	for (MoveLL* p = moves; p != nullptr; p = p->next)
 	{
-		if (p->from == from && p->to == to)
+		if (p->from.x == from.x && p->from.y == from.y &&
+			p->to.x == to.x && p->to.y == to.y)
 		{
 			eaten = p->eaten;
 			return true;
@@ -372,7 +373,7 @@ bool Field::_can(const sf::Vector2i& from, const sf::Vector2i& to, Field::MoveLL
 	return false;
 }
 
-bool Field::click(sf::Vector2i position, Field::MoveLL* moves, const Checker::Color& color, bool& options)
+bool Field::click(sf::Vector2i position, Field::MoveLL* moves, const Checker::Color& color, bool& options, const bool& an)
 {
 	static sf::Vector2i prev_position(0, 0);
 	static Checker::Color prev_color = Checker::BLACK;
@@ -423,7 +424,7 @@ bool Field::click(sf::Vector2i position, Field::MoveLL* moves, const Checker::Co
 						{
 							_checkers[position.x][position.y] = _checkers[_selected->get_position().x][_selected->get_position().y];
 							_checkers[_selected->get_position().x][_selected->get_position().y] = nullptr;
-							_selected->move(position);
+							_selected->move(position, an);
 							_selected->unselect();
 							_selected = nullptr;
 							if (eaten != sf::Vector2i(-1, -1))
